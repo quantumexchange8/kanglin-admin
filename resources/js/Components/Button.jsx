@@ -31,9 +31,6 @@ export default ({
         case "neutral":
             variantClasses = `text-gray-50 bg-gray-900 font-medium hover:bg-gray-950`;
             break;
-        case "neutral":
-            variantClasses = `text-gray-50 bg-gray-900 font-medium hover:bg-gray-950`;
-            break;
         case "gray":
             variantClasses = `text-gray-900 bg-gray-100 font-medium hover:bg-gray-200`;
             break;

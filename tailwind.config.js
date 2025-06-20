@@ -27,7 +27,7 @@ export default {
                     600: '#8e2fee',
                     700: '#7a1ed2',
                     800: '#681eab',
-                    900: '#531985',
+                    900: '#531985', // #531985
                     950: '#390566',
                 },
                 'gray': {
@@ -98,4 +98,11 @@ export default {
     },
 
     plugins: [forms],
+    corePlugins: {
+        // preflight: false, // <== disable this!
+        ringColor: false, // 禁用 ring color 插件
+        ringWidth: false, // 禁用 ring width 插件
+        ringOpacity: false, // 禁用 ring opacity 插件
+        ringOffsetWidth: false, // 禁用 ring offset 插件
+    },
 };

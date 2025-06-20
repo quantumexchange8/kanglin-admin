@@ -1,0 +1,21 @@
+{
+    "category_name": "類別名稱",
+    "description": "描述",
+    "category": "類別",
+    "dashboard": "首頁",
+    "product_listing": "產品列表",
+    "create_product": "創建產品",
+    "product_name": "產品名稱",
+    "product_price": "產品價格",
+    "instruction_desciption": "產品成分",
+    "product_feature": "使用說明",
+    "upload_image": "上傳照片",
+    "upload_image_thumbnail": "產品封面照片",
+    "upload_product_image": "產品照片",
+    "product_code": "產品編號",
+    "product_pv": "產品積分",
+    "product_max_kp": "產品限用KP",
+    "stock": "產品庫存",
+    "quantity": "數量",
+    "submit": "提交"
+}
