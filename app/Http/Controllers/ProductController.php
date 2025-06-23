@@ -23,7 +23,6 @@ class ProductController extends Controller
 
     public function productStore(Request $request)
     {
-
         
         $validate = $request->validate([
             'name' => 'required|string|max:255',
@@ -55,6 +54,15 @@ class ProductController extends Controller
             'status' => 'active'
         ]);
 
+        if ($request->hasFile('images_thumbnail')) {
+            $product->addMedia($request->images_thumbnail)->toMediaCollection('product_thumbnail');
+        }
+
+        if (!empty($request->images)) {
+            foreach ($request->images as $image) {
+                $product->addMedia($image)->toMediaCollection('product_images');
+            }
+        }
 
         return redirect()->back();
     }

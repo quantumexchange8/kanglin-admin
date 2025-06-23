@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Input } from 'antd';
 import Button from "@/Components/Button";
+import InputError from "@/Components/InputError";
 
 export default function CreateProduct() {
 
@@ -120,6 +121,7 @@ export default function CreateProduct() {
                         className="mt-1 block w-full"
                         onChange={(e) => setData('name', e.target.value)}
                     />
+                    <InputError message={errors.name} />
                 </div>
                 <div className="flex flex-col gap-2">
                     <InputLabel value={t('product_code')} />
@@ -131,6 +133,7 @@ export default function CreateProduct() {
                         className="mt-1 block w-full"
                         onChange={(e) => setData('product_code', e.target.value)}
                     />
+                    <InputError message={errors.product_code} />
                 </div>
                 <div className="flex flex-col gap-2">
                     <InputLabel value={t('product_price')} />
@@ -143,6 +146,7 @@ export default function CreateProduct() {
                         prefix="NT$"
                         className="w-full"
                     />
+                    <InputError message={errors.product_price} />
                 </div>
                 <div className="flex flex-col gap-2">
                     <InputLabel value={t('category')} />
@@ -154,6 +158,7 @@ export default function CreateProduct() {
                         }))}
                         loading={isLoading}
                     />
+                    <InputError message={errors.category_id} />
                 </div>
                 <div className="flex flex-col gap-2">
                     <InputLabel value={t('product_pv')} />
@@ -166,6 +171,7 @@ export default function CreateProduct() {
                         suffix="PV"
                         className="w-full"
                     />
+                    <InputError message={errors.product_pv} />
                 </div>
                 <div className="flex flex-col gap-2">
                     <InputLabel value={t('product_max_kp')} />
@@ -178,6 +184,7 @@ export default function CreateProduct() {
                         suffix="KP"
                         className="w-full"
                     />
+                    <InputError message={errors.product_max_kp} />
                 </div>
                 <div className="flex flex-col gap-2">
                     <InputLabel value={t('stock')} />
@@ -190,6 +197,7 @@ export default function CreateProduct() {
                         suffix={t('quantity')}
                         className="w-full"
                     />
+                    <InputError message={errors.stock} />
                 </div>
                 <div className="flex flex-col gap-2 col-span-2 ">
                     <InputLabel value={t('description')} />
@@ -199,6 +207,7 @@ export default function CreateProduct() {
                         rows={4}                       
                         placeholder=""    
                     />
+                    <InputError message={errors.description} />
                 </div>
                 <div className="flex flex-col gap-2 col-span-2 ">
                     <InputLabel value={t('instruction_desciption')} />
@@ -208,6 +217,7 @@ export default function CreateProduct() {
                         rows={4}                       
                         placeholder=""    
                     />
+                    <InputError message={errors.instruction_desciption} />
                 </div>
                 <div className="flex flex-col gap-2 col-span-2 ">
                     <InputLabel value={t('product_feature')} />
@@ -217,6 +227,7 @@ export default function CreateProduct() {
                         rows={4}                       
                         placeholder=""    
                     />
+                    <InputError message={errors.product_feature} />
                 </div>
                 <div className="flex justify-end gap-2 col-span-2 w-full ">
                     <div className="flex w-full md:w-full md:max-w-20">
