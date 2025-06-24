@@ -9,7 +9,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 class Product extends Model implements HasMedia
 {
 
-    use HasMedia, InteractsWithMedia;
+    use InteractsWithMedia;
 
     protected $fillable = [
         'category_id',
